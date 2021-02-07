@@ -7,7 +7,7 @@ class piholeSqlite:
         self.db_file = db_file
         self.query = query
 
-    def create_connection (self):a
+    def create_connection (self):
         try:
             conn = sqlite3.connect (self.db_file)
             return conn
