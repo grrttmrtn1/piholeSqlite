@@ -7,17 +7,17 @@ class piholeSqlite:
         self.db_file = db_file
         self.query = query
 
-    def create_connection (self):
+    def create_connection (self):a
         try:
             conn = sqlite3.connect (self.db_file)
             return conn
         except Error as e:
-            print (e)
+            print(e)
         return None
 
-    def query (self, conn):
-        cur = conn.cursor ()
+    def runQuery (self, conn):
         conn.text_factory = str
+        cur = conn.cursor()
         cur.execute (self.query)
-        rows = cur.fetchall ()
+        rows = cur.fetchall()
         return rows
